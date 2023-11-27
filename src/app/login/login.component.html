@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <title>Login</title>
+</head>
+
+<body>
+
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+
+      <!-- Icon -->
+      <div class="fadeIn first">
+        <img class="logo"
+          src="https://i.ibb.co/Qjq8nBb/2.jpg"
+          id="icon" alt="User Icon" />
+      </div>
+
+      <!-- Login Form -->
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        
+        <input formControlName="emailId" type="text" class="form-control" placeholder="Enter Email"
+          [ngClass]="{ 'is-invalid': submitted && ['emailId'] }">
+        <div *ngIf="submitted && ['emailId']" class="invalid-feedback">
+          <div *ngIf="['emailId']">email-Id is required</div>
+          <div *ngIf="['emailId']">Email must be a valid email address</div>
+        </div>
+
+        <input formControlName=password type="password" class="form-control" placeholder="Enter Password" [ngClass]="{ 'is-invalid': submitted && ['password']}">
+        <div *ngIf="submitted && ['password']" class="invalid-feedback">
+          <div *ngIf="['password']">Password is required</div>
+        </div>
+
+        <input type="submit" class="fadeIn fourth" value="Log In">
+
+
+      </form>
+
+      <!-- Remind Passowrd -->
+      <div id="formFooter">
+        <a class="underlineHover" routerLink="/registration">SignUp?</a>
+      </div>
+    </div>
+    <h4 style="color: aliceblue;">{{message}}</h4>
+  </div>
+</body>
+
+</html>

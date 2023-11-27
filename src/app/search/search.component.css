@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+body{
+  background-color: #1C2833;
+  font-family: 'Montserrat', sans-serif;
+}
+.dropdown:hover .dropdown-menu{
+    display:block;
+}
+/* ===fav button=== */
+.click{
+  color:red;
+}
+.fa-heart{
+  cursor: pointer;
+}
+/* ========new carousel======*/
+body,html{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background: #222831;
+}
+
+.bg-dark{
+    background-color: black!important;
+}
+
+
+input#slid {
+  width: 100%;
+  height: 5px;
+  position: relative;
+  top: -9px;
+  margin: 0;
+  z-index: 1;
+  opacity: 0;
+}
+#slider #cerlc{
+  background: #00adb5;
+  border:1.5px solid #222831;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  top: -4px;
+  position: absolute;
+}
+
+/*======= new carousel close=========*/
+
+/* ==========navbar=========== */
+.navbar{
+    min-height: 80px;
+    font-size: 18px;
+}
+
+form{
+  margin-right: 400px;
+}
+
+.profile{
+  font-size: 20px;
+  color: #ffff;
+  margin-right: 50px;
+}
+
+footer{
+  background-color:#07090a;
+  color: azure;
+}
+.card{
+  background-color: #f4f7f7
+}
+.padding{
+  padding: 40px;
+}
+
+.container{
+  padding-top: 50px;
+}
+.card-image{
+  padding-top: 10px;
+  padding-left: 20px;
+  height: 250px;
+  width: 250px;
+}
+
+.lead{
+  text-align: center;
+  /* padding:auto; */
+}
+#getstart{
+  background-color: orange;
+}
+#getstart:hover{
+background-color:gray;
+color: white;
+}
+.jumbotron{
+  padding: 2rem;
+  border-radius: 0;
+  }
+
+.padding{
+    padding-bottom: 2rem;
+}
+
+.display-4{
+  border-bottom: #fff;
+}
+
+.section{
+  color: #ffff;
+  padding-left: 40px;
+}
+
+/* ====socials====== */
+
+.social{
+  padding-top:10px;
+ font-size: 1.5rem;
+}
+  .fa-facebook{
+    color:#3b5999
+  }
+  .fa-twitter{
+    color:#55acee
+  }
+  .fa-google-plus-official{
+    color: #dd4b39;
+  }
+.fa-linkedin-square{
+  color: #0077B5;
+}
+.fa-dribbble{
+  color: #ea4c89;
+}
+
+.fa-microphone{
+  color: whitesmoke;
+  border: none;
+  outline:none;
+}
+.fa-microphone:hover{
+  color: black;
+  border: none;
+  outline:none;
+}
+
+

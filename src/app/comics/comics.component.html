@@ -1,0 +1,236 @@
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" />
+
+<!-- ==========Header============== -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color: black">
+        <a class="navbar-brand" routerLink='/landing'><img src="https://i.ibb.co/10QhR1t/1.jpg" style="height: 70px; width: 70px;" alt="icon"/></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                One Piece
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" >One Piece</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" >Attack On Titan</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" >Death Note</a>
+              </div>
+            </li>
+            <li style="margin-right:10px ;">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" >
+            </li>
+            <li>
+              <button type="submit" class="btn btn-default"><i class="fa fa-microphone" style="font-size: 180%" (click)="startVoiceService()"></i></button>
+            </li>
+            
+            <li>
+              <button class="btn btn-outline-success my-2 my-sm-0" (click)="search()" [routerLink]="['/search']" [queryParams]="{q:text}" >Search</button>
+            </li>
+          </ul>
+        </div>
+        <!-- Profile -->
+        <div style="margin-right: 5%; margin-left: 10%;" class="gb_h gb_i profile"><a routerLink="/fav" class="gb_g" data-pid="23"  target="_top"><i class="fa fa-star" aria-hidden="true" style="font-size:20px; color:#ffff"></i>
+        </a></div>
+        <div class="dropdown dropleft float-right">
+          <button type="button" class="btn btn-dark " data-toggle="dropdown">
+                             <i class="fa fa-ellipsis-v"></i> 
+
+          </button>
+          <div class="dropdown-menu">
+            <a routerLink="/myassets" class="dropdown-item" ><i class="fa fa-user" aria-hidden="true"></i> {{email}}</a>
+            <a href="#" class="dropdown-item " (click)="logout()"><i class="fa fa-power-off mr-1" aria-hidden="true"></i>Logout</a>
+
+          </div>
+        </div>
+
+      </nav>
+
+
+
+
+
+
+
+      <div class="container-fluid" style="background-color: black; padding: 20px;">
+        <div class="row">
+            <div class="col-md-4 col-sm-12 d-flex flex-column align-items-center justify-content-center" style="min-height: 40vh;">
+                <input type="text" [(ngModel)]="formInput" placeholder="Enter Image Description" class="form-control" style="background-color: orange; color: black;">
+                <button (click)="fetchImage()"  id="getstart" class="btn mt-2 getstart">Get Image</button>
+                <h3>{{text}}</h3>
+                <div *ngFor="let image of images; let i = index" class="image-entry">
+                  <span class="image-label">Image {{ i + 1 }}</span>
+                  <button (click)="deleteImage(i)" class="delete-btn">Delete</button>
+                </div>
+            </div>
+            <div class="col-md-8 col-sm-12">
+              <div class="row">
+                <!-- Adjusted padding for each image container and margin-bottom for spacing between rows -->
+                <div class="col-12 col-sm-6 col-md-4 mb-4 px-3 py-3" *ngFor="let image of images">
+                  <img [src]="image" alt="Fetched Image" class="img-fluid">
+                  <!-- The px-3 and py-3 classes add padding on the x (left and right) and y (top and bottom) of each image container -->
+                  <!-- The mb-4 class adds a margin to the bottom of each image container -->
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+<footer class="page-footer font-small stylish-color-dark pt-4">
+
+<!-- Footer Links -->
+<div class="container text-center text-md-left">
+
+<!-- Grid row -->
+<div class="row">
+
+  <!-- Grid column -->
+  <div class="col-md-4 mx-auto">
+
+    <!-- Content -->
+    <h5 style ="font-size:20px;" class="font-weight-bold text-uppercase mt-3 mb-4">KGPToon</h5>
+    <p style ="font-size:17px;">India's Largest viweing toon platform!!</p>
+
+  </div>
+  <!-- Grid column -->
+
+  <hr class="clearfix w-100 d-md-none">
+
+  <!-- Grid column -->
+  <div class="col-md-2 mx-auto">
+
+    <!-- Links -->
+    <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Thrillers</h5>
+
+    <ul class="list-unstyled">
+      <li>
+        <a href="#!">AdventureMan1</a>
+      </li>
+      <li>
+        <a href="#!">AdventureMan2</a>
+      </li>
+      <li>
+        <a href="#!">AdventureMan3</a>
+      </li>
+      <li>
+        <a href="#!">AdventureMan4</a>
+      </li>
+    </ul>
+
+  </div>
+  <!-- Grid column -->
+
+  <hr class="clearfix w-100 d-md-none">
+
+  <!-- Grid column -->
+  <div class="col-md-2 mx-auto">
+
+    <!-- Links -->
+    <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Action</h5>
+
+    <ul class="list-unstyled">
+      <li>
+        <a href="#!">AOT S1</a>
+      </li>
+      <li>
+        <a href="#!">AOT S2</a>
+      </li>
+      <li>
+        <a href="#!">AOT S3</a>
+      </li>
+      <li>
+        <a href="#!">AOT S4</a>
+      </li>
+    </ul>
+
+  </div>
+  <!-- Grid column -->
+
+  <hr class="clearfix w-100 d-md-none">
+
+  <!-- Grid column -->
+  <div class="col-md-2 mx-auto">
+
+    <!-- Links -->
+    <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Fantacy</h5>
+
+    <ul class="list-unstyled">
+      <li>
+        <a href="#!">Death Note S1</a>
+      </li>
+      <li>
+        <a href="#!">Death Note S2</a>
+      </li>
+      <li>
+        <a href="#!">Death Note S3</a>
+      </li>
+      <li>
+        <a href="#!"></a>
+      </li>
+    </ul>
+
+  </div>
+  <!-- Grid column -->
+
+</div>
+<!-- Grid row -->
+
+</div>
+<!-- Footer Links -->
+
+<!-- Social buttons -->
+<ul class="list-unstyled list-inline text-center social">
+<li class="list-inline-item">
+  <a class="btn-floating btn-fb mx-1">
+    <i class="fa fa-facebook"> </i>
+  </a>
+</li>
+<li class="list-inline-item">
+  <a class="btn-floating btn-tw mx-1">
+    <i class="fa fa-twitter"> </i>
+  </a>
+</li>
+<li class="list-inline-item">
+  <a class="btn-floating btn-gplus mx-1">
+    <i class="fa fa-google-plus-official" ></i>
+  </a>
+</li>
+<li class="list-inline-item">
+  <a class="btn-floating btn-li mx-1">
+    <i class="fa fa-linkedin-square"> </i>
+  </a>
+</li>
+<li class="list-inline-item">
+  <a class="btn-floating btn-dribbble mx-1">
+    <i class="fa fa-dribbble"> </i>
+  </a>
+</li>
+</ul>
+<!-- Social buttons -->
+
+<!-- Copyright -->
+<div class="footer-copyright text-center py-3">© 2023 Copyright:
+<a href="#">KGPToon</a>
+</div>
+<!-- Copyright -->
+</footer><!-- =========Footer=========== -->
+
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+<script src="../assets/carousel.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous"></script>

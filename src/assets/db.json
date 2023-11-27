@@ -1,0 +1,198 @@
+{
+  "technologies": [
+    {
+      "Technology": "Java",
+      "assetTitles": [
+        "Best Practices",
+        "Engineering Practices",
+        "Tips and Tricks",
+        "Snippets",
+        "PitFalls",
+        "Mistakes",
+        "Impcode",
+        "Syntax"
+       
+       
+      ],
+      "Concepts": [
+        "Data Types",
+        "Functions",
+        "OOPS",
+        "Exceptions",
+        "Threading",
+        "Collections",
+        "Merging",
+        "Map",
+        "Arrays",
+        "Strings"
+        
+      ]
+    },
+    {
+      "Technology": "Python",
+      "assetTitles": [
+        "Engineering Practices",
+        "Tips and Tricks",
+        "Best Practices",
+        "Snippets",
+        "PitFalls",
+        "Mistakes",
+        "Impcode",
+        "Syntax"
+       
+        
+      ],
+      "Concepts": [
+        "Sorting",
+        "Merging",
+        "Exceptions",
+        "Searching",
+        "Threading",
+         "Merging",
+        "Collections",
+        "Map",
+        "Arrays",
+        "Strings"
+       
+      ]
+    },
+    {
+      "Technology": "DevOps",
+      "assetTitles": [
+        "Syntax",
+        "Engineering Practices",
+        "Tips and Tricks",
+        "Impcode",
+        "Best Practices",
+        "PitFalls",
+        "Mistakes",
+        "Snippets"
+       
+        
+      ],
+      "Concepts": [
+        "Automation",
+        "Exceptions",
+        "Threading",
+        "Collections",
+        "Code Release"
+       
+      ]
+    },
+    {
+      "Technology": "C++",
+      "assetTitles": [
+        "Best Practices",
+        "Engineering Practices",
+        "Tips and Tricks",
+        "Snippets",
+        "PitFalls",
+        "Mistakes",
+        "Impcode",
+        "Syntax"
+       
+       
+      ],
+      "Concepts": [
+        "Recursion",
+        "Tree Sorting",
+        "Exceptions",
+        "Threading",
+        "Graphs",
+        "Collections",
+        "Merging",
+        "Arrays",
+        "Map",
+        "Strings"
+      ]
+    },
+    {
+      "Technology": "Angular",
+      "assetTitles": [
+        "Best Practices",
+        "Engineering Practices",
+        "Tips and Tricks",
+        "PitFalls",
+        "Snippets",
+        "Mistakes",
+        "Impcode",
+        "Syntax"
+       
+       
+      ],
+      "Concepts": [
+        "TypeScript",
+        "Functions",
+        "OOPS",
+        "Exceptions",
+        "Arrow Functions",
+        "Collections",
+        "Filter",
+        "Map Function",
+        "Arrays",
+        "Strings",
+        "Lists"
+        
+      ]
+    },
+    
+    {
+    "Technology": "C#",
+      "assetTitles": [
+        "Best Practices",
+        "Tips and Tricks" ,
+         "Engineering Practices",
+        "Snippets",
+        "PitFalls",
+        "Mistakes",
+        "Impcode",
+        "Syntax"
+       
+       
+      ],
+      "Concepts": [
+        "Data Types",
+        "Functions",
+        "OOPS",
+        "Exceptions",
+        "Collections",
+        "Threading",
+        "Map",
+        "Merging",
+        "Arrays",
+        "Strings"
+        
+      ]
+    },
+    {
+      "Technology": "Spring",
+      "assetTitles": [
+        "Best Practices",
+        "Engineering Practices",
+        "Tips and Tricks",
+        "Snippets",
+        "PitFalls",
+        "Mistakes",
+        "Impcode",
+        "Syntax",
+        "Reusable components"
+       
+       
+      ],
+      "Concepts": [
+        "IOC",
+        "Beans Configuration",
+        "Microservices",
+        "Exceptions",
+        "Threading",
+        "Collections",
+        "JPA Repository",
+        "Services"
+        
+      ]
+    }
+
+    
+  ]
+
+}
